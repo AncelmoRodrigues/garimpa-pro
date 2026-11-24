@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GARIMPA PRO - Ache o produto viral antes de todo mundo</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,sans-serif}
+body{background:#0B0D10;color:#fff;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;background:rgba(11,13,16,.9);backdrop-filter:blur(10px);display:flex;align-items:center;gap:10px;padding:12px 16px;z-index:10;border-bottom:1px solid #222}
+.logo{font-size:20px;font-weight:900;letter-spacing:1px}.logo span{color:#00E5A0}
+.top button{margin-left:auto;background:#00E5A0;border:0;padding:9px 14px;border-radius:999px;font-weight:800;cursor:pointer}
+.hero{padding:28px 16px 20px;text-align:center;max-width:620px;margin:0 auto}
+.badge{display:inline-block;background:#1A2E26;color:#00E5A0;padding:6px 12px;border-radius:999px;font-size:11px;font-weight:800}
+.hero h1{font-size:32px;line-height:1.15;margin:14px 0 10px}
+.hero h1 span{color:#00E5A0}
+.hero h1 em{color:#FFE99A;font-style:normal}
+.hero p{color:#aaa;font-size:14px;line-height:1.6}
+.cta{margin:18px 0 8px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.cta button{padding:15px 20px;border-radius:12px;border:0;font-weight:900;font-size:14px;cursor:pointer}
+.cta .main{background:linear-gradient(90deg,#FFE99A,#D4AF37);color:#000;flex:1;max-width:320px}
+.cta .sec{background:#1A1D22;color:#fff;border:1px solid #333}
+.social{font-size:11px;color:#888;margin-top:8px}
+.mock{max-width:620px;margin:16px auto;padding:0 16px}
+.mockBox{background:#15181D;border:1px solid #262B33;border-radius:18px;padding:14px;position:relative;overflow:hidden}
+.mockTop{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.mockTop b{font-size:13px}.live{color:#00E5A0;font-size:11px;font-weight:800}
+.row{display:flex;gap:10px;align-items:center;padding:10px;background:#0B0D10;border:1px solid #222;border-radius:12px;margin-bottom:8px}
+.row img{width:48px;height:48px;border-radius:8px;object-fit:cover}
+.row b{font-size:12px;line-height:1.3;display:block}.row small{color:#888;font-size:11px}
+.up{color:#00E5A0;font-weight:800;font-size:12px}
+.plat{font-size:10px;padding:3px 7px;border-radius:999px;font-weight:800}
+.ml{background:#FFE600;color:#000}.sh{background:#EE4D2D;color:#fff}.tk{background:#fff;color:#000}
+.chart{background:#0B0D10;border:1px solid #222;border-radius:12px;padding:12px;margin-top:10px}
+.chart b{font-size:12px}
+.barRow{display:flex;align-items:end;gap:6px;height:80px;margin-top:10px}
+.barRow i{flex:1;background:linear-gradient(180deg,#00E5A0,#0A5A3A);border-radius:6px 6px 0 0;display:block}
+.section{max-width:620px;margin:0 auto;padding:22px 16px}
+.section h2{font-size:22px;line-height:1.3}.section h2 span{color:#00E5A0}
+.section p{color:#aaa;font-size:13px;line-height:1.6;margin-top:8px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px}
+.card{background:#15181D;border:1px solid #262B33;border-radius:14px;padding:14px}
+.card span{font-size:24px}.card b{font-size:13px;display:block;margin:8px 0 4px}.card p{font-size:11px;margin:0}
+.videoGrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px}
+.vcard{background:#15181D;border:1px solid #262B33;border-radius:14px;overflow:hidden}
+.vcard img{width:100%;height:140px;object-fit:cover;display:block}
+.vcard div{padding:10px}.vcard b{font-size:11px;line-height:1.4;display:block}.vcard small{color:#888;font-size:11px}
+.vcard .sales{color:#00E5A0;font-size:11px;font-weight:800;margin-top:4px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.planBox{background:#15181D;border:1px solid #262B33;border-radius:16px;padding:16px}
+.planBox.pro{border:2px solid #D4AF37;background:linear-gradient(180deg,#1A170A,#15181D);position:relative}
+.planBox.pro::before{content:"MAIS VENDIDO 🔥";position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#D4AF37;color:#000;font-size:10px;font-weight:900;padding:4px 10px;border-radius:999px}
+.planBox h3{font-size:15px}.planBox .price{font-size:26px;font-weight:900;margin:8px 0}.planBox .price small{font-size:12px;color:#888;font-weight:400}
+.planBox ul{list-style:none;font-size:12px;line-height:1.9;color:#ccc}
+.planBox button{width:100%;padding:12px;border:0;border-radius:10px;font-weight:800;cursor:pointer;margin-top:12px}
+.planBox .btnFree{background:#222;color:#fff}.planBox .btnPro{background:linear-gradient(90deg,#FFE99A,#D4AF37);color:#000}
+.depo{background:#15181D;border:1px solid #262B33;border-radius:14px;padding:14px;margin-top:10px;display:flex;gap:10px}
+.depo img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.depo b{font-size:12px}.depo p{font-size:12px;margin:4px 0 0}
+.depo span{color:#FFD700;font-size:11px}
+.faq{background:#15181D;border:1px solid #262B33;border-radius:12px;padding:14px;margin-top:10px}
+.faq b{font-size:13px}.faq p{font-size:12px;margin-top:6px}
+.timerBox{background:linear-gradient(90deg,#FF3B30,#FF9500);border-radius:14px;padding:14px;text-align:center;margin-top:14px}
+.timerBox h3{font-size:16px}.timerBox p{font-size:12px;color:#fff}
+.timer{font-size:28px;font-weight:900;letter-spacing:3px;margin-top:6px}
+.final{background:linear-gradient(180deg,#1A170A,#0B0D10);border-top:1px solid #333;padding:26px 16px;text-align:center}
+.final h2{font-size:24px;line-height:1.3}.final p{color:#aaa;font-size:13px;margin:10px 0 16px}
+.final button{background:linear-gradient(90deg,#FFE99A,#D4AF37);border:0;padding:16px 22px;border-radius:12px;font-weight:900;font-size:15px;cursor:pointer;width:100%;max-width:420px}
+.garantia{font-size:11px;color:#888;margin-top:10px}
+.footer{padding:16px;text-align:center;color:#555;font-size:11px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;z-index:99;padding:16px}
+.modal.open{display:flex}
+.box{background:#15181D;width:100%;max-width:400px;border-radius:18px;padding:20px;border:1px solid #262B33;max-height:90vh;overflow:auto}
+.box input{width:100%;padding:13px;border-radius:12px;border:1px solid #333;background:#000;color:#fff;margin-bottom:10px}
+.box button{width:100%;padding:13px;border:0;border-radius:12px;background:#00E5A0;font-weight:800;cursor:pointer}
+.pixBox{background:#000;border:1px dashed #00E5A0;border-radius:12px;padding:12px;text-align:center;display:none;margin-top:10px}
+.pixBox code{font-size:11px;word-break:break-all;color:#00E5A0}
+@media(max-width:600px){.hero h1{font-size:28px}.grid3{grid-template-columns:1fr}.compare{grid-template-columns:1fr}.videoGrid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="top"><div class="logo">GARIMPA<span>PRO</span></div><button onclick="abrirCheckout()">Ser PRO 👑</button></div>
+
+<div class="hero">
+  <span class="badge">🔥 KALODATA BRASILEIRO • ML + SHOPEE + TIKTOK</span>
+  <h1>Ache o produto viral <span>antes</span> de todo mundo. <em>Venda antes de saturar.</em></h1>
+  <p>Ranking em tempo real dos mais vendidos no Mercado Livre, Shopee e TikTok. Com gráfico de vendas, vídeos que vendem e roteiro pronto pra copiar.</p>
+  <div class="cta"><button class="main" onclick="abrirCheckout()">👑 Quero ser PRO - R$ 19,90/mês</button><button class="sec" onclick="verApp()">👀 Ver App Grátis</button></div>
+  <p class="social">⭐ 4.9 • +2.347 garimpeiras usando • 7 dias de garantia • Cancele quando quiser</p>
+</div>
+
+<div class="mock"><div class="mockBox">
+  <div class="mockTop"><b>🏆 Top Produtos Agora</b><span class="live">● AO VIVO</span><span style="margin-left:auto;font-size:11px;color:#888">Hoje • 7 dias</span></div>
+  <div class="row"><span style="font-weight:900">#1</span><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=200"><div style="flex:1"><b>Sérum Facial Vitamina C Clareador - Viral TikTok</b><small>9.200 vendidos • R$ 19,90</small></div><span class="plat tk">TikTok</span><span class="up">▲ +112%</span></div>
+  <div class="row"><span style="font-weight:900">#2</span><img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=200"><div style="flex:1"><b>Fone Bluetooth TWS Prova Dágua</b><small>12.000 vendidos • R$ 45,90</small></div><span class="plat sh">Shopee</span><span class="up">▲ +34%</span></div>
+  <div class="row"><span style="font-weight:900">#3</span><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=200"><div style="flex:1"><b>Kit Maquiagem Completa 12 Peças</b><small>8.900 vendidos • R$ 39,90</small></div><span class="plat ml">Mercado Livre</span><span class="up">▲ +68%</span></div>
+  <div class="chart"><b>📈 Vendas nos últimos 30 dias - Produto #1</b><div class="barRow"><i style="height:30%"></i><i style="height:35%"></i><i style="height:32%"></i><i style="height:40%"></i><i style="height:45%"></i><i style="height:50%"></i><i style="height:48%"></i><i style="height:60%"></i><i style="height:68%"></i><i style="height:75%"></i><i style="height:82%"></i><i style="height:95%"></i></div><p style="font-size:11px;color:#888;margin-top:6px">Curva subindo = produto validado. É hora de entrar.</p></div>
+</div></div>
+
+<div class="section">
+  <h2>Por que quem usa <span>Garimpa Pro</span> vende mais?</h2>
+  <p>Você não precisa mais passar 3 horas rolando TikTok e Shopee tentando adivinhar o que vende. O app faz isso pra você.</p>
+  <div class="grid3">
+    <div class="card"><span>🏆</span><b>Ranking Real</b><p>Mais vendidos ordenados por vendas e receita, não por achismo.</p></div>
+    <div class="card"><span>📈</span><b>Gráfico 30 dias</b><p>Veja se está subindo, estável ou já saturando.</p></div>
+    <div class="card"><span>🚨</span><b>Alerta de Explosão</b><p>Te avisa quando um produto cresce +80% em 7 dias.</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🎬 Vídeos que já estão <span>vendendo</span> esse produto</h2>
+  <p>Igual Kalodata: você vê o vídeo, o hook, as views e quantas vendas ele gerou. É só copiar o formato.</p>
+  <div class="videoGrid">
+    <div class="vcard"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400"><div><b>Eu testei o sérum viral... e olha isso 😱</b><small>@achadinhos.maya • 842k views</small><div class="sales">🛒 2.340 vendas por esse vídeo</div></div></div>
+    <div class="vcard"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400"><div><b>Achadinho que TODO MUNDO tá comprando</b><small>@garimpa.oficial • 512k views</small><div class="sales">🛒 1.890 vendas por esse vídeo</div></div></div>
+    <div class="vcard"><img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400"><div><b>Vale a pena? Teste sincero em 30 seg</b><small>@testei.pravoce • 389k views</small><div class="sales">🛒 1.240 vendas por esse vídeo</div></div></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Escolha seu plano</h2>
+  <div class="compare">
+    <div class="planBox"><h3>Grátis</h3><div class="price">R$ 0 <small>/ pra sempre</small></div><ul><li>✅ Top 10 produtos</li><li>✅ 3 favoritos</li><li>❌ Sem alerta de explosão</li><li>❌ Sem vídeos e roteiros</li><li>❌ Ranking bloqueado</li></ul><button class="btnFree" onclick="verApp()">Começar Grátis</button></div>
+    <div class="planBox pro"><h3>👑 PRO - Anual</h3><div class="price">R$ 9,90 <small>/mês • R$ 118,80/ano</small></div><ul><li>✅ Ranking completo ilimitado</li><li>✅ Alertas de explosão em tempo real</li><li>✅ Todos os vídeos + roteiros pra copiar</li><li>✅ Favoritos ilimitados</li><li>✅ Comparativo ML x Shopee x TikTok</li><li>✅ Grupo VIP no WhatsApp</li></ul><button class="btnPro" onclick="abrirCheckout()">Quero ser PRO 👑</button></div>
+  </div>
+  <div class="timerBox"><h3>⏰ Oferta de lançamento termina em</h3><div class="timer" id="timer">00 : 09 : 47</div><p>Depois volta para R$ 19,90/mês</p></div>
+</div>
+
+<div class="section">
+  <h2>O que as garimpeiras estão falando</h2>
+  <div class="depo"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200"><div><b>Camila R. - São Paulo</b><span>★★★★★</span><p>"Achei o sérum 2 dias antes de viralizar. Fiz o vídeo com o roteiro do app e vendi 87 unidades em 1 dia."</p></div></div>
+  <div class="depo"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200"><div><b>Fernanda L. - Belo Horizonte</b><span>★★★★★</span><p>"Eu gastava horas procurando produto. Agora abro o app, vejo o que explodiu e já gravo. Economizou minha vida."</p></div></div>
+  <div class="depo"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200"><div><b>Jessica M. - Rio de Janeiro</b><span>★★★★★</span><p>"O alerta de explosão me salvou. Peguei um produto com +112% e fui a primeira a postar."</p></div></div>
+</div>
+
+<div class="section">
+  <h2>Perguntas frequentes</h2>
+  <div class="faq"><b>Preciso pagar para testar?</b><p>Não. Começa grátis com Top 10. Se gostar, vira PRO quando quiser.</p></div>
+  <div class="faq"><b>Funciona no celular?</b><p>Sim, 100% feito para celular. Abre direto no navegador, sem baixar nada.</p></div>
+  <div class="faq"><b>Posso cancelar?</b><p>Sim, cancela quando quiser. Sem fidelidade, sem multa.</p></div>
+  <div class="faq"><b>É igual Kalodata?</b><p>É o Kalodata brasileiro: mas com Mercado Livre + Shopee + TikTok juntos. Nenhum outro app tem os 3.</p></div>
+</div>
+
+<div class="final">
+  <h2>Seu próximo viral pode estar<br>explodindo <span style="color:#00E5A0">AGORA</span></h2>
+  <p>Enquanto você pensa, outra pessoa já está gravando o vídeo desse produto.</p>
+  <button onclick="abrirCheckout()">👑 Quero meu acesso PRO - R$ 9,90/mês</button>
+  <p class="garantia">✅ 7 dias de garantia • Pagamento via PIX • Liberação imediata • Sem fidelidade</p>
+</div>
+<div class="footer">GARIMPA PRO © 2026 • Feito no Brasil • Termos • Privacidade</div>
+
+<div class="modal" id="modalPay"><div class="box"><span style="float:right;cursor:pointer" onclick="fecharPay()">✕</span>
+<h2>👑 Finalizar PRO</h2><p>Anual • R$ 118,80 • 7 dias de garantia</p>
+<input id="nomeCheckout" placeholder="Seu nome">
+<input id="emailCheckout" placeholder="Seu WhatsApp / E-mail">
+<div style="display:flex;gap:8px;margin-bottom:10px"><button onclick="setPay('pix')" style="flex:1">PIX ⚡</button><button onclick="setPay('cartao')" style="flex:1;background:#222;color:#fff">Cartão 💳</button></div>
+<button onclick="gerarPix()">Gerar PIX e Liberar PRO 👑</button>
+<div class="pixBox" id="pixBox"><p style="color:#fff;font-weight:800">PIX Copia e Cola</p><code id="pixCode">00020126580014BR.GOV.BCB.PIX0136garimpa-pro-maya-1234567895204000053039865405118.805802BR5913GARIMPA PRO6009SAO PAULO62070503***6304ABCD</code><br><br><button onclick="copiarPix()" style="background:#00E5A0">📋 Copiar Código PIX</button><br><br><button onclick="confirmar()" style="background:#D4AF37;color:#000">✅ Já Paguei - Liberar Acesso</button></div>
+<p style="text-align:center;font-size:11px;margin-top:10px">Depois do pagamento, você recebe o link do app no seu WhatsApp.</p>
+</div></div>
+
+<script>
+let tempo=587;
+setInterval(()=>{ tempo--; if(tempo<0) tempo=587; let h=String(Math.floor(tempo/3600)).padStart(2,'0'); let m=String(Math.floor(tempo%3600/60)).padStart(2,'0'); let s=String(tempo%60).padStart(2,'0'); document.getElementById('timer').innerText=h+' : '+m+' : '+s; },1000);
+function abrirCheckout(){ document.getElementById('modalPay').classList.add('open'); }
+function fecharPay(){ document.getElementById('modalPay').classList.remove('open'); }
+function gerarPix(){ document.getElementById('pixBox').style.display='block'; }
+function copiarPix(){ navigator.clipboard.writeText(document.getElementById('pixCode').innerText); alert('PIX copiado! 📋'); }
+function confirmar(){ let nome=document.getElementById('nomeCheckout').value||'Garimpeira'; alert(`🎉 Parabéns, ${nome}! Você agora é PRO 👑\n\nTe mandei o link do app no seu WhatsApp. Bora garimpar!`); fecharPay(); }
+function verApp(){ alert('Abrindo o app grátis... 🚀\n\nNo Netlify, coloque o link do seu app aqui: garimpa-pro.netlify.app'); }
+function setPay(t){ if(t==='pix') gerarPix(); else alert('Cartão: conecte Stripe / Kiwify / Mercado Pago para ativar de verdade.'); }
+</script>
+</body>
+</html>
